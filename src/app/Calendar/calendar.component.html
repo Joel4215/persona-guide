@@ -1,0 +1,17 @@
+<h1>Calendar Test</h1>
+
+<p>Loading: {{ loading }}</p>
+
+<p>Number of days: {{ days.length }}</p>
+
+@if (days.length > 0) {
+  <h2>First Day</h2>
+
+  <p>ID: {{ days[0].id }}</p>
+  <p>Day: {{ days[0].day }}</p>
+  <p>Month: {{ days[0].month }}</p>
+  <p>Day of Week: {{ days[0].day_of_week }}</p>
+  <p>Notes: {{ days[0].notes }}</p>
+}
+
+
