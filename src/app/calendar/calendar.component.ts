@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { JsonPipe } from '@angular/common';
 import { CalendarService } from './calendar.service';
 
 @Component({
   selector: 'app-calendar',
   standalone: true,
-  imports: [JsonPipe],
   templateUrl: './calendar.component.html',
   styleUrls: ['./calendar.component.sass']
 })
@@ -27,6 +25,7 @@ export class CalendarComponent implements OnInit {
 
     try {
       this.days = await this.calendarService.getDays();
+      console.log(this.days.length)
       console.log('Calendar days:', this.days);
     } catch (err) {
       console.error('Error loading calendar:', err);

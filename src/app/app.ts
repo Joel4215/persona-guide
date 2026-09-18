@@ -1,9 +1,8 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CalendarComponent } from './Calendar/calendar.component';
 
 @Component({
-  imports: [RouterOutlet, CalendarComponent],
+  imports: [RouterOutlet],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',
