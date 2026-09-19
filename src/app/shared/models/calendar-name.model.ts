@@ -3,5 +3,7 @@ export interface CalendarDay {
   id: string;
   day: number;
   month: number;
-  notes: string;
+  day_of_week: string;
+  notes: string[];
+  game: number;
 }

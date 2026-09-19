@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { supabase } from '../shared/supabase';
+import { CalendarDay } from '../shared/models/calendar-name.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,6 @@ export class CalendarService {
       return [];
     }
 
-    return data;
+    return data as CalendarDay[];
   }
 }

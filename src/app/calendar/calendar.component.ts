@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CalendarService } from './calendar.service';
+import { CalendarDay } from '../shared/models/calendar-name.model';
 
 @Component({
   selector: 'app-calendar',
@@ -9,11 +10,11 @@ import { CalendarService } from './calendar.service';
 })
 export class CalendarComponent implements OnInit {
 
-  days: any[] = [];
+  calendarDay: CalendarDay[] = []
   loading = false;
   error = '';
 
-  constructor(private calendarService: CalendarService) {}
+  constructor(private calendarService: CalendarService, private cd: ChangeDetectorRef) {}
 
   async ngOnInit() {
     await this.loadDays();
@@ -24,14 +25,15 @@ export class CalendarComponent implements OnInit {
     this.error = '';
 
     try {
-      this.days = await this.calendarService.getDays();
-      console.log(this.days.length)
-      console.log('Calendar days:', this.days);
+      this.calendarDay = await this.calendarService.getDays();
+      console.log(this.calendarDay.length)
+      console.log('Calendar days:', this.calendarDay);
     } catch (err) {
       console.error('Error loading calendar:', err);
       this.error = 'Unable to load calendar days.';
     } finally {
       this.loading = false;
+      this.cd.detectChanges();
     }
   }
 }
