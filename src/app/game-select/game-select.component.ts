@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {Router} from '@angular/router';
 
 
@@ -12,7 +12,12 @@ import {Router} from '@angular/router';
 export class GameSelectCompnent {
       private router = inject(Router);
 
-    gameSelected(){
+
+    async gameSelected(gameId: number){
+
+        localStorage.setItem('selectedGameId', gameId.toString());
+
         this.router.navigate(['/calendar'])
+
     }
 }

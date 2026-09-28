@@ -5,13 +5,12 @@
 <p>Number of days: {{ calendarDay.length }}</p>
 
 @if (loading == false) {
-  <h2>First Day</h2>
 
   <p>ID: {{ calendarDay[0]?.id }}</p>
   <p>Day: {{ calendarDay[0]?.day }}</p>
   <p>Month: {{ calendarDay[0]?.month }}</p>
   <p>Day of Week: {{ calendarDay[0]?.day_of_week }}</p>
   <p>Notes: {{ calendarDay[0]?.notes }}</p>
-  <p>Game: {{ calendarDay[0]?.game}}</p>
+  <p>Game: {{ calendarDay[0]?.game_id}}</p>
 }
 
