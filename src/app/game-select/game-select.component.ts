@@ -13,9 +13,9 @@ export class GameSelectCompnent {
       private router = inject(Router);
 
 
-    async gameSelected(gameId: number){
+    async gameSelected(chosenGame: string){
 
-        localStorage.setItem('selectedGameId', gameId.toString());
+        localStorage.setItem('selectedGame', chosenGame);
 
         this.router.navigate(['/calendar'])
 
