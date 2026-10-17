@@ -22,6 +22,7 @@
     "@angular/ssr": "^22.1.8",
     "@supabase/supabase-js": "^2.116.0",
     "express": "^5.1.0",
+    "ng-hub-ui-calendar": "^22.11.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
