@@ -1,0 +1,10 @@
+:host {
+  // Target the calendar host tokens directly
+  --hub-calendar-today-background: transparent !important;
+  --hub-calendar-today-color: inherit !important;
+  --hub-calendar-today-border: none !important;
+  --hub-calendar-today-box-shadow: none !important;
+
+  // Clean out the global system accent fallback if it's pulling from your root theme
+  --hub-sys-color-primary: transparent !important; 
+}

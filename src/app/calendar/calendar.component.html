@@ -1,7 +1,9 @@
 <hub-calendar
   [events]="events()"
   [view]="view()"
-  [height]="600"
-  (viewChange)="view.set($event)">
+  [height]="800"
+  (viewChange)="view.set($event)"
+  [(selectedDate)]="startDate"
+  compact>
 </hub-calendar>
 
